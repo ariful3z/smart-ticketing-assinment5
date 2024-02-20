@@ -4,10 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Ticketing assignment</title>
+    <!-- daisy UI and Tailwind -->
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+<!-- tailwind custom classess -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'bus-primary':'rgba(29,209,0,0.1)',
+          }
+        }
+      }
+    }
+  </script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- custom css -->
+<link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
+<body class="font-raleway">
+    <!-- navber -->
     <section>
-        
+       <nav>
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm gap-12 dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52">
+                  <li><a>Home</a></li>               
+                  <li><a>About</a></li>
+                  <li><a>Destination</a></li>
+                  <li><a>Search</a></li>
+                </ul>
+              </div>
+              <a class="btn ml-14 btn-ghost  font-extrabold text-4xl">P-Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal gap-12 px-1 font-medium text-base">
+                <li><a>Home</a></li>               
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end mr-24">
+              <a class="btn text-green-500 bg-[rgba(29,209,0,0.1)] font-bold text-base">Bus <img src="images/bus-icon.png" alt=""> </a>
+          
+            </div>
+          </div>
+       </nav>
+
+      
+
     </section>
+    <!-- Bus section -->
+    <div class="ml-32">
+        <div class="card w-[930px] bg-base-100 shadow-xl justify-center image-full">
+            <figure><img src="images/banner.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title justify-center font-extrabold text-white text-6xl">End-to-End Travel with</h2>
+              <h2 class="card-title justify-center text-[rgb(29,209,0)] text-6xl font-extrabold "> P Paribahan </h2>
+              <p class="text-center text-base mt-9">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+              <div class="card-actions justify-center">
+                <button class="btn border-radius: 12px;
+
+                 text-base border-none font-bold bg-[rgb(29,209,0)] mb-12">Buy Tickets</button>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- Best Offers  -->
+    <div>
+        <h2 class="text-center mt-36 mb-12 text-4xl font-bold">Best offers for you</h2>
+
+    </div>
+    <div class="flex w-2/5 ml-24 gap-6 ">
+        <img src="images/Group 113.png" alt="">
+        <img src="images/Group 3605@1x.png" alt="">
+        
+    </div>
+<div class="flex justify-center">
+    <div class="text-center mt-12 font-bold text-base box-sizing: border-box;
+    rounded inline-block  border p-4
+     text-[rgb(29,209,0)] ">
+        <p>See All Offers</p>
+    </div>
+</div>
 </body>
 </html>
