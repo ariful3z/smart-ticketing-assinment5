@@ -1,187 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Ticketing assignment</title>
-    <!-- daisy UI and Tailwind -->
-    
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 
-<!-- tailwind custom classess -->
-<script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Ticketing assignment</title>
+  <!-- daisy UI and Tailwind -->
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- tailwind custom classess -->
+  <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             clifford: '#da373d',
-            'bus-primary':'rgba(29,209,0,0.1)',
+            'bus-primary': 'rgba(29,209,0,0.1)',
           }
         }
       }
     }
   </script>
 
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- custom css -->
-<link rel="stylesheet" href="styles/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- custom css -->
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body class="font-raleway">
-    <!-- navber -->
-    <section>
-       <nav>
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </div>
-                <ul tabindex="0" class="menu menu-sm gap-12 dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52">
-                  <li><a>Home</a></li>               
-                  <li><a>About</a></li>
-                  <li><a>Destination</a></li>
-                  <li><a>Search</a></li>
-                </ul>
-              </div>
-              <a class="btn ml-14 btn-ghost  font-extrabold text-4xl">P-Ticket</a>
+  <!-- navber -->
+  <section>
+    <nav>
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
             </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal gap-12 px-1 font-medium text-base">
-                <li><a>Home</a></li>               
-                <li><a>About</a></li>
-                <li><a>Destination</a></li>
-                <li><a>Search</a></li>
-              </ul>
-            </div>
-            <div class="navbar-end mr-24">
-              <a class="btn text-green-500 bg-[rgba(29,209,0,0.1)] font-bold text-base">Bus <img src="images/bus-icon.png" alt=""> </a>
-          
-            </div>
+            <ul tabindex="0"
+              class="menu menu-sm gap-12 dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
           </div>
-       </nav>
+          <a class="btn ml-14 btn-ghost  font-extrabold text-4xl">P-Ticket</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal gap-12 px-1 font-medium text-base">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end mr-24">
+          <a class="btn text-green-500 bg-[rgba(29,209,0,0.1)] font-bold text-base">Bus <img src="images/bus-icon.png"
+              alt=""> </a>
 
-      
+        </div>
+      </div>
+    </nav>
 
-    </section>
-    <!-- Bus section -->
-    <div class="ml-32">
-        <div class="card w-[930px] bg-base-100 shadow-xl justify-center image-full">
-            <figure><img src="images/banner.png" alt="Shoes" /></figure>
-            <div class="card-body">
-              <h2 class="card-title justify-center font-extrabold text-white text-6xl">End-to-End Travel with</h2>
-              <h2 class="card-title justify-center text-[rgb(29,209,0)] text-6xl font-extrabold "> P Paribahan </h2>
-              <p class="text-center text-base mt-9">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
-              <div class="card-actions justify-center">
-                <button class="btn border-radius: 12px;
+
+
+  </section>
+  <!-- Bus section -->
+  <div class="ml-32">
+    <div class="card w-[930px] bg-base-100 shadow-xl justify-center image-full">
+      <figure><img src="images/banner.png" alt="Shoes" /></figure>
+      <div class="card-body">
+        <h2 class="card-title justify-center font-extrabold text-white text-6xl">End-to-End Travel with</h2>
+        <h2 class="card-title justify-center text-[rgb(29,209,0)] text-6xl font-extrabold "> P Paribahan </h2>
+        <p class="text-center text-base mt-9">Yes, you can run unit tests and view the results directly within the app.
+          The <br> integrated testing features allow for a streamlined .</p>
+        <div class="card-actions justify-center">
+          <button class="btn border-radius: 12px;
 
                  text-base border-none font-bold bg-[rgb(29,209,0)] mb-12">Buy Tickets</button>
-              </div>
-            </div>
-          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Best Offers  -->
-    <div>
-        <h2 class="text-center mt-36 mb-12 text-4xl font-bold">Best offers for you</h2>
+  <!-- Best Offers  -->
+  <div>
+    <h2 class="text-center mt-36 mb-12 text-4xl font-bold">Best offers for you</h2>
 
-    </div>
-    <div class="flex w-2/5 ml-24 gap-6  ">
-        <img src="images/Group 113.png" alt="">
-        <img src="images/Group 3605@1x.png" alt="">
-        
-    </div>
-<div class="flex justify-center">
+  </div>
+  <div class="flex w-2/5 ml-24 gap-6  ">
+    <img src="images/Group 113.png" alt="">
+    <img src="images/Group 3605@1x.png" alt="">
+
+  </div>
+  <div class="flex justify-center">
     <div class="text-center mt-12 font-bold text-base box-sizing: border-box;
     rounded inline-block  border p-4
      text-[rgb(29,209,0)] ">
-        <p>See All Offers</p>
+      <p>See All Offers</p>
     </div>
-</div>
+  </div>
 
 
-<!-- <div>
+  <!-- <div>
     <img class="mt-20 bg-no-repeat" src="images/Group 3604.png" alt="">
 
 </div> -->
-<!-- ph paribhan section -->
-<div class="text-center mt-24">
-  <h2 class="text-4xl font-bold">P.H Paribahan</h2>
-  <p class="mt-7 text-base font-semibold">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
-</div>
+  <!-- ph paribhan section -->
+  <div class="text-center   mt-24">
+    <h2 class="text-4xl font-bold">P.H Paribahan</h2>
+    <p class="mt-7 text-base font-semibold">Yes, you can run unit tests and view the results directly within the app.
+      The integrated <br> testing features allow for a streamlined .</p>
+  </div>
 
 
 
-<!-- greenline paribahan -->
+  <!-- greenline paribahan -->
 
-<div class="bg-[rgb(255,255,255)]">
+  <div class="bg-[rgb(255,255,255)]">
 
-  <div class="hero-content flex-col lg:flex-row-reverse">
-   
+    <div class="hero-content flex-col lg:flex-row-reverse">
+
+
+
+      <div>
+
+        <img class="" src="images/fare.png" alt="">
+        <h3 class="mt-4 font-bold text-xl">550 Taka<br><span class="text-2xl text-base text-[rgba(3,7,18,0.6)]">Per
+            Seat</span></h3>
+      </div>
+      <img src="images/info-devider.png" class="max-w-sm rounded-lg shadow-2xl" />
+
+
+      <div>
+
+
+        <div class=" flex justify-center">
+          <div class="flex mr-80">
+            <img src="images/bus-logo.png" alt="">
+
+            <h3 class="text-xl font-bold">Greenline Paribahan <br> <span class="text-base font-normal ">Coach-009-WEB !
+                AC_Business</span></h3>
+
+
+
+          </div>
+          <div class="ml-28">
+            <a class="btn text-green-500 bg-[rgba(29,209,0,0.1)] font-bold text-base"> <img src="images/seat-green.png"
+                alt="">40 Seats left </a>
+
+          </div>
+
+        </div>
+
+        <div class="bg-[rgb(247,248,248)] rounded border">
+
+          <div class="flex justify-between">
+            <div class="ml-7 mt-12 font-normal">
+              <h4>Route</h4>
+            </div>
+            <div class="mr-16 mt-8 font-bold">
+              <h4>Dhaka - Sylhet</h4>
+            </div>
+          </div>
+          <div class="flex justify-between">
+            <div class="ml-7 mt-12">
+              <h4>Departure Time</h4>
+            </div>
+            <div class="mr-16 mt-8 font-bold">
+              <h4>9:00 PM</h4>
+            </div>
+          </div>
+
+          <div class="flex justify-evenly mt-10 ">
+            <h3 class="bg-[rgba(3,7,18,0.05)] rounded-lg p-6 font-medium">Boarding Point - Laxmipur</h3>
+            <h3 class="bg-[rgba(3,7,18,0.05)] rounded-lg p-6 font-medium">Dropping Point - Bogura</h3>
+            <h3 class="bg-[rgba(3,7,18,0.05)] rounded-lg p-6 font-medium">Est. Time - 11 Hour</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- seat section -->
+
+  <section class="grid gap-12 md:grid-cols-2 grid-cols-1">
+    <div class="font-bold text-2xl mb-11">
+      <h4>Select Your Seat</h4>
+      <div class="flex gap-96 mt-10">
+        <a class="flex items-center  text-[rgba(3,7,18,0.6)] font-bold text-base"> <img src="images/seat-gray.png" alt="">Available </a>
+        <div class="">
+          <a class="flex items-center  text-green-500 font-bold text-base"> <img src="images/seat-green.png"
+              alt="">Selected </a>
   
-     
-<div>
+        </div>
   
-  <img class="" src="images/fare.png" alt="">
-  <h3 class="mt-4 font-bold text-xl">550 Taka<br><span class="text-2xl text-base text-[rgba(3,7,18,0.6)]">Per Seat</span></h3>
-</div>
-    <img src="images/info-devider.png" class="max-w-sm rounded-lg shadow-2xl" />
-    
-    
+      </div>
+      <div class="">
+        <div class="ml-[520px] ml-7 btn border-radius:12px;
+        mb-8
+
+
+        text-base border-none  font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">
+          <button> <img src="images/Vector.png" alt=""></button>
+        </div>
+        <div class="flex gap-14  mb-10 ml-28 ">
+          <li class="list-none">A</li>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">A1</button>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">A2</button>
+          <div class="ml-14">
+            <button class="btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">A3</button>
+            <button class="ml-7 btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3 ">A4</button>
+          </div>
+        </div>
+        <div class="flex   mb-10 gap-14 ml-28">
+          <li class="list-none">B</li>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">B1</button>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">B2</button>
+          <div class="ml-14">
+            <button class="btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">B3</button>
+            <button class="ml-7 btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">B4</button>
+          </div>
+        </div>
+        <div class="flex gap-14 mb-10 ml-28">
+          <li class="list-none">C</li>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">C1</button>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">C2</button>
+          <div class="ml-14">
+            <button class="btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">C3</button>
+            <button class="ml-6 btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">C4</button>
+          </div>
+        </div>
+        <div class="flex gap-14 mb-10 ml-28">
+          <li class="list-none">D</li>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">D1</button>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">D2</button>
+          <div class="ml-14">
+            <button class="btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">D3</button>
+            <button class="ml-6 btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">D4</button>
+          </div>
+        </div>
+        <div class="flex gap-14 mb-10 ml-28">
+          <li class="list-none">E</li>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">E1</button>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">E2</button>
+          <div class="ml-16">
+            <button class="btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">E3</button>
+            <button class="ml-6 btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">E4</button>
+          </div>
+        </div>
+        <div class="flex gap-14  mb-10 ml-24">
+          <li class="list-none p-3 ">F</li>
+          <button class=" btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">F1</button>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">F2</button>
+          <div class="ml-[60px]">
+            <button class="btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">F3</button>
+            <button class="ml-6 btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">F4</button>
+          </div>
+        </div>
+        <div class="flex gap-14 mb-10 ml-28">
+          <li class="list-none">G</li>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">G1</button>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">G2</button>
+          <div class="ml-14">
+            <button class="btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">G3</button>
+            <button class="ml-6 btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">G4</button>
+          </div>
+        </div>
+        <div class="flex gap-14 mb-10 ml-28">
+          <li class="list-none">H</li>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">H1</button>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">H2</button>
+          <div class="ml-12">
+            <button class="btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">H3</button>
+            <button class=" btn ml-7 border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">H4</button>
+          </div>
+        </div>
+        <div class="flex gap-16 mb-10 ml-28">
+          <li class="list-none">I</li>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">I1</button>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">I2</button>
+          <div class="ml-14">
+            <button class="btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">I3</button>
+            <button class="ml-7 btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">I4</button>
+          </div>
+        </div>
+        <div class="flex gap-14 ml-28">
+          <li class="list-none">J</li>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">J1</button>
+          <button class="btn border-radius: 12px;
+
+          text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">J2</button>
+          <div class="ml-16">
+            <button class="btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">J3</button>
+            <button class="ml-7 btn border-radius: 12px;
+
+            text-base border-none font-bold text-[rgba(3,7,18,0.5)] bg-[rgb(247,248,248)] text-base p-3">J4</button>
+          </div>
+        </div>
+  
+      </div>
+      
+    </div>
     <div>
+     
+    <div class="font-bold text-base  mb-11 ">
+      <h4>Select Your Seat</h4>
+      <div class="flex justify-evenly mr-72 mt-3 text-base text-[rgba(3,7,18,0.6)] ">
+        <h3 class=" font-medium">Seat2</h3>
+        <h3 class=" font-medium">Economoy</h3>
+        <h3 class=" font-medium">550</h3>
+      </div>
+      <div class="flex justify-evenly text-base text-[rgba(3,7,18,0.6)] mr-72 mt-3 ">
+        <h3 class=" font-medium">Seat2</h3>
+        <h3 class=" font-medium">Economoy</h3>
+        <h3 class=" font-medium">550</h3>
+      </div>
+      <div class="flex justify-evenly gap-20 mr-72 mt-5 ">
+        <h3 class=" font-medium">Total price</h3>
+
+        <h3 class=" font-medium">1200</h3>
+
+      </div>
+  <div class="flex bg-[rgb(255,255,255)] gap-4 ">
+    <label class="form-control ">
+      <div class="label">
+        <span class="label-text"></span>
+
+      </div>
+      <input type="text" placeholder="Have any copupon?" class="input "border-none />
+
+    </label>
+    <button class="bg-[rgb(29,209,0)] mt-3 btn border-radius: 12px;
+
+    text-base border-none font-bold text-white text-base p-2">Apply</button>
+  </div>
 
 
-<div class=" flex justify-center">
-  <div class="flex mr-80">
-    <img src="images/bus-logo.png" alt="">
+        <div class="flex justify-evenly gap-28 mr-72  mb-10  mt-5 ">
+        <h3 class=" font-bold">Grand Total</h3>
 
-    <h3 class="text-xl font-bold">Greenline Paribahan <br> <span class="text-base font-normal ">Coach-009-WEB ! AC_Business</span></h3>
- 
-  
+        <h3 class=" font-bold ">BDT 1100</h3>
+
+      </div>
+
+
+
+      <div class="">
+        <label class="form-control w-full max-w-xs">
+          <div class="label">
+            <span class="label-text">Passenger Name*</span>
+
+          </div>
+          <input type="text" placeholder="Enter your name" class="input input-bordered w-full max-w-xs" />
+
+        </label>
+        <label class="form-control w-full max-w-xs">
+          <div class="label">
+            <span class="label-text">Phone Number*</span>
+
+          </div>
+          <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs" />
+
+        </label>
+        <label class="form-control w-full max-w-xs">
+          <div class="label">
+            <span class="label-text">Email ID</span>
+
+          </div>
+          <input type="email" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs" />
+
+        </label>
+
+        <a class="btn mt-5 md:w-[320px] w-[317px] bg-[rgb(29,209,0)] text-white text-base">Next</a>
+      </div>
+    </div>
+    </div>
+
+   
+
+
     
-  </div>
-  <div class="ml-28">
-    <a class="btn text-green-500 bg-[rgba(29,209,0,0.1)] font-bold text-base"> <img src="images/seat-green.png" alt="">40 Seats left  </a>
-
-  </div>
-
-</div>
-
-<div class="bg-[rgb(247,248,248)] rounded border">
-  
-<div class="flex justify-between">
-  <div class="ml-7 mt-12 font-normal">
-  <h4>Route</h4>
-  </div>
-  <div class="mr-16 mt-8 font-bold">
-  <h4>Dhaka - Sylhet</h4>
-  </div>
-  </div>
-  <div class="flex justify-between">
-  <div class="ml-7 mt-12">
-  <h4>Departure Time</h4>
-  </div>
-  <div class="mr-16 mt-8 font-bold">
-  <h4>9:00 PM</h4>
-  </div>
-  </div>
-
-  <div class="flex justify-evenly mt-10 ">
-    <h3 class="bg-[rgba(3,7,18,0.05)] rounded-lg p-6 font-medium">Boarding Point - Laxmipur</h3>
-    <h3 class="bg-[rgba(3,7,18,0.05)] rounded-lg p-6 font-medium">Dropping Point - Bogura</h3>
-    <h3 class="bg-[rgba(3,7,18,0.05)] rounded-lg p-6 font-medium">Est. Time - 11 Hour</h3>
-  </div>
-</div>
-
-
-
-
- 
-
 
     </div>
 
-  </div>
-</div>
+
+
+
+
+
+  </section>
 
 </body>
+
 </html>
